@@ -1,0 +1,10 @@
+spring:
+  ai:
+    openai:
+      api-key: ${AI_BAI_LIAN_API_KEY} # 必填,在操作系统环境变量中设置这个变量后,重启IDEA才能生效。因为IDEA启动的时候会缓存这个变量
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      chat:
+        options:
+          model: qwen-plus
+          # 这个值0~1，值越大代表生成的结果随机性越强。如果是一个聊天，这个值可以大一点。如果是一些严谨的规划，则这个值可以设置小一些
+          temperature: 0.7
