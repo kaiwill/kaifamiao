@@ -24,6 +24,8 @@
        
         <!-- Spring Boot -->
         <spring-boot.version>3.4.5</spring-boot.version>
+        <!--阿里百炼提供了SDK,为了方便这里引入了 Alibaba Cloud AI -->
+        <spring-ai-alibaba.version>1.0.0.3</spring-ai-alibaba.version>
 
         <fastjson.version>2.0.51</fastjson.version>
 
@@ -52,6 +54,11 @@
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud.ai</groupId>
+                <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
+                <version>${spring-ai-alibaba.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
