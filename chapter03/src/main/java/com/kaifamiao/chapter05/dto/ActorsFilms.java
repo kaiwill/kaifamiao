@@ -1,4 +1,4 @@
-package com.kaifamiao.chapter04.dto;
+package com.kaifamiao.chapter05.dto;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
