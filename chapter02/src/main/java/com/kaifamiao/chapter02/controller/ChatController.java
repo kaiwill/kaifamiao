@@ -32,15 +32,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <p>ClassName: com.kaifamiao.chapter02.controller.ChatController
- * <p>Function: 大模型对话
- * <p>date: 2025-09-24 15:39
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
 @RestController
 @Slf4j
 public class ChatController {

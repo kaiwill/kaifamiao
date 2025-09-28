@@ -19,15 +19,6 @@ import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Component;
 
-/**
- * <p>InterfaceName: com.kaifamiao.chapter04.service.WatcherToolService
- * <p>Function: 天气查询工具
- * <p>date: 2025-09-25 15:41
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
 @Component
 @Slf4j
 public class WatcherToolService {

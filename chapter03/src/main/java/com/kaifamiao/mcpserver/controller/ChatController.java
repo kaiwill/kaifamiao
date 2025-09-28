@@ -34,15 +34,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <p>ClassName: com.kaifamiao.chapter03.controller.ChatController
- * <p>Function: TODO 功能描述
- * <p>date: 2025-09-25 13:01
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
 @RestController
 @Slf4j
 public class ChatController {

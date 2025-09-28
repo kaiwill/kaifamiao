@@ -12,7 +12,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.mcpserver;
+package com.kaifamiao.chapter07;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -20,15 +20,6 @@ import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-/**
- * <p>ClassName: com.kaifamiao.chapter05.test.EmbeddingClientTest
- * <p>Function: TODO 功能描述
- * <p>date: 2025-09-25 17:41
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
 @SpringBootTest
 @Slf4j
 public class EmbeddingModelTest {

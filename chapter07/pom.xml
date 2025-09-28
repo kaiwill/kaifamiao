@@ -8,10 +8,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>chapter05</artifactId>
+    <artifactId>chapter07</artifactId>
     <packaging>jar</packaging>
 
-    <name>chapter05</name>
+    <name>chapter07</name>
 
     <dependencies>
         <dependency>
