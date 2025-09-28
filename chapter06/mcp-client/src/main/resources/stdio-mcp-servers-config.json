@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "command": "npx.cmd"
+    },
+    "weather": {
+      "command": "D:\\Program Files\\Java\\jdk-21.0.8\\bin\\java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dspring.main.web-application-type=none",
+        "-Dlogging.pattern.console=",
+        "-jar",
+        "E:\\mcp-server\\mcp-server-1.0.0.jar"
+      ],
+      "env": {}
+    }
+  }
+}

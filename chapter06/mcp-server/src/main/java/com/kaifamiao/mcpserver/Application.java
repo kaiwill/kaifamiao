@@ -14,26 +14,12 @@
  *******************************************************************************/
 package com.kaifamiao.mcpserver;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * <p>ClassName: com.kaifamiao.chapter01.Application
- * <p>Function: 启动入口
- * <p>date: 2025-09-24 11:38
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
 @SpringBootApplication
-@Slf4j
 public class Application {
-
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-
     }
 }

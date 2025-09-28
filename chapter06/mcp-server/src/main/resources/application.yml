@@ -1,0 +1,27 @@
+spring:
+  main:
+    # 非web模式运行（必须设置）
+    # web-application-type: none
+    # 关闭打印banner（必须设置）
+    banner-mode: off
+  application:
+    name: mcp-server
+  ai:
+    mcp:
+      server:
+        name: sse-weather-server
+        version: 0.0.1
+        # 定义同步模式（必须设置）
+        type: SYNC
+        # 是否关闭stdio模式，因为webmvc支持stdio和sse，这里演示sse，关闭stdio
+        stdio: false
+        # 用于客户端发送消息的自定义 SSE 消息端点路径，以供网络传输使用
+        sse-message-endpoint: /mcp/message
+        # 用于网络传输的自定义 SSE 端点路径，以供客户端连接使用
+        sse-endpoint: /sse
+# 不在控制台输出日志（如果设置在log文件输出也可以，但是不能在控制台输出，因为这个会传递到client的解析里面）（必须设置）
+#logging:
+#  pattern:
+#    console:
+server:
+  port: 8081

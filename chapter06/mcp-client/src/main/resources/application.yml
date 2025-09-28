@@ -1,0 +1,32 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${AI_BAI_LIAN_API_KEY} # 必填,在操作系统环境变量中设置这个变量后,重启IDEA才能生效。因为IDEA启动的时候会缓存这个变量
+      chat:
+        options:
+          model: qwen-plus
+          # 这个值0~1，值越大代表生成的结果随机性越强。如果是一个聊天，这个值可以大一点。如果是一些严谨的规划，则这个值可以设置小一些
+          temperature: 0.7
+    mcp:
+      client:
+        type: SYNC
+        #        stdio:
+        #          # 指定mcp server 配置文件
+        #          servers-configuration: classpath:/stdio-mcp-servers-config.json
+        sse:
+          enabled: true
+          connections: # connections 是一个Map，key是连接的名称，value是连接的配置
+            # url 与 sse-endpoint 拼接起来是完整地址
+            server1:
+              url: https://mcp.api-inference.modelscope.net
+              sse-endpoint: /7a292ea0ec3f4e/sse
+            server2:
+              url: http://127.0.0.1:8081
+              sse-endpoint: /sse  # 切入点,client默认会向url/sse下发送请求
+logging:
+  level:
+    io.modelcontextprotocol: #观察到调用 mcp 工具的日志信息
+      client: DEBUG
+      spec: DEBUG
+    org.springframework.ai: DEBUG
+

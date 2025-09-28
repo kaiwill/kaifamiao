@@ -12,28 +12,21 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.mcpserver;
+package com.kaifamiao.mcpserver.comfiguration;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.kaifamiao.mcpserver.service.WeatherService;
+import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.ai.tool.method.MethodToolCallbackProvider;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
-/**
- * <p>ClassName: com.kaifamiao.chapter01.Application
- * <p>Function: 启动入口
- * <p>date: 2025-09-24 11:38
- *
- * @author wuqing
- * @version 1.0.0
- * @since JDK 17
- */
-@SpringBootApplication
-@Slf4j
-public class Application {
-
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-
+@Configuration
+public class McpServerConfig {
+    @Bean
+    @Primary // 添加此注解指定优先使用此Bean
+    public ToolCallbackProvider toolProvider(WeatherService weatherService) {
+        // 注册工具类实例
+        return MethodToolCallbackProvider.builder().toolObjects(weatherService).build();
     }
 }

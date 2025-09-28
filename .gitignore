@@ -7,4 +7,4 @@
 /.vscode/
 /target/
 /**/target/
-
+/**/.flattened-pom.xml
