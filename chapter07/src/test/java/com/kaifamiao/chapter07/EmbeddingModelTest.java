@@ -14,17 +14,23 @@
  *******************************************************************************/
 package com.kaifamiao.chapter07;
 
+import com.kaifamiao.chapter07.service.MyEmbeddingService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.embedding.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 @Slf4j
 public class EmbeddingModelTest {
     @Autowired
     private EmbeddingModel embeddingModel;
+
+    @Autowired
+    private MyEmbeddingService myEmbeddingService;
 
     @Test
     public void testEmbeddingModel() {
@@ -50,5 +56,37 @@ public class EmbeddingModelTest {
             9 : 9.4796414E-4
              */
         }
+    }
+
+    @Test
+    public void callTest() {
+        var input = "你好";
+        EmbeddingOptions embeddingOptions = EmbeddingOptionsBuilder.builder()
+                // 设定embedding模型名称
+                .withModel("text-embedding-v4")//该模型默认维度为1024
+                .withDimensions(128) //设定embedding模型维度
+                .build();
+        EmbeddingRequest  embeddingRequest = new EmbeddingRequest(List.of(input), embeddingOptions);
+        EmbeddingResponse response         = embeddingModel.call(embeddingRequest);
+        log.info("EmbeddingResponseMetadata:{}", response.getMetadata().getUsage());
+        response.getResults().forEach(result -> {
+            log.info("EmbeddingResult:{}-> {}", result.getIndex(), result.getOutput());
+        });
+    }
+
+    @Test
+    public void cosineSimilarityTest() {
+        // 1. 文本嵌入示例
+        String        text1      = "Spring AI 是一个用于构建 AI 应用的框架";
+        String        text2      = "Spring AI 帮助开发者快速集成人工智能功能";
+        String        text3      = "Java 是一种跨平台的编程语言";
+        List<float[]> embeddings = myEmbeddingService.embed(List.of(text1, text2, text3));
+        log.info("向量维度:{} ", embeddings.getFirst().length);
+
+        // 2. 计算余弦相似度
+        double similarity1_2 = myEmbeddingService.cosineSimilarity(embeddings.get(0), embeddings.get(1));
+        double similarity1_3 = myEmbeddingService.cosineSimilarity(embeddings.get(0), embeddings.get(2));
+        System.out.printf("text1 与 text2 相似度: %.4f%n", similarity1_2); // 应接近 1
+        System.out.printf("text1 与 text3 相似度: %.4f%n", similarity1_3); // 应较低
     }
 }
