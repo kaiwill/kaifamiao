@@ -12,7 +12,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter07.service;
+package com.kaifamiao.chapter08.service;
 
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.stereotype.Service;

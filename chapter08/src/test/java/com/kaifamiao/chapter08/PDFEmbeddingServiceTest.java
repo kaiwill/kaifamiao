@@ -12,19 +12,29 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter07;
+package com.kaifamiao.chapter08;
 
+import com.kaifamiao.chapter08.service.PDFEmbeddingService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.ai.embedding.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
-@SpringBootApplication
+import java.util.List;
+
+@SpringBootTest
 @Slf4j
-public class Application {
+public class PDFEmbeddingServiceTest {
+    @Autowired
+    private PDFEmbeddingService pdfEmbeddingService;
 
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-
+    @Test
+    public void testProcessPDFAndStoreToMilvus() {
+        Resource resource = new ClassPathResource("Embedding-Models.pdf");
+        pdfEmbeddingService.processPDFAndStoreToMilvus(resource);
     }
+
 }

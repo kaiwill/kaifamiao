@@ -12,7 +12,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter07.configuration;
+package com.kaifamiao.chapter08.configuration;
 
 import io.milvus.client.MilvusServiceClient;
 import io.milvus.param.ConnectParam;
