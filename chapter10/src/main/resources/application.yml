@@ -1,0 +1,26 @@
+spring:
+  ai:
+    ollama:
+      # ollama本地服务
+      base-url: http://localhost:11434
+      chat:
+        model: qwen3:4b # 使用的模型
+        options:
+          temperature: 0.8
+    zhipuai:
+      api-key: ${ZHIPU_AI_KEY}
+      chat:
+        options:
+          model: glm-4-flashx-250414
+          temperature: 0.7
+    dashscope:
+      api-key: ${AI_BAI_LIAN_API_KEY} # 必填,在操作系统环境变量中设置这个变量后,重启IDEA才能生效。因为IDEA启动的时候会缓存这个变量
+      chat:
+        options:
+          model: qwen-plus
+          # 这个值0~1，值越大代表生成的结果随机性越强。如果是一个聊天，这个值可以大一点。如果是一些严谨的规划，则这个值可以设置小一些
+          temperature: 0.7
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    org.springframework.web: DEBUG
