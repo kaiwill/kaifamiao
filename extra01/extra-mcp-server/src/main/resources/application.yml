@@ -1,0 +1,13 @@
+spring:
+  ai:
+    mcp:
+      server:
+        name: streamable-weather-server
+        version: 0.0.1
+        protocol: streamable
+        type: sync
+        streamable-http:
+          mcp-endpoint: /mcp
+          keep-alive-interval: 30s
+server:
+  port: 8081

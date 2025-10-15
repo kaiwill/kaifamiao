@@ -37,7 +37,7 @@
                     <!--增加此行，可以解决打包时，找不到jar包的问题-->
                     <addResources>true</addResources>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>com.kaifamiao.chapter01.Application</mainClass>
+                    <mainClass>com.kaifamiao.extra01.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

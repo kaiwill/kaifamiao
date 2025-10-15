@@ -1,0 +1,23 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${AI_BAI_LIAN_API_KEY} # 必填,在操作系统环境变量中设置这个变量后,重启IDEA才能生效。因为IDEA启动的时候会缓存这个变量
+      chat:
+        options:
+          model: qwen-plus
+          # 这个值0~1，值越大代表生成的结果随机性越强。如果是一个聊天，这个值可以大一点。如果是一些严谨的规划，则这个值可以设置小一些
+          temperature: 0.7
+    mcp:
+      client:
+        streamable-http:
+          connections:
+            server1: # mcp 服务URL
+              url: http://127.0.0.1:8081/mcp
+
+logging:
+  level:
+    io.modelcontextprotocol: #观察到调用 mcp 工具的日志信息
+      client: DEBUG
+      spec: DEBUG
+    org.springframework.ai: DEBUG
+
