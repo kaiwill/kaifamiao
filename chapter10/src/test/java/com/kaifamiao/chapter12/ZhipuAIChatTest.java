@@ -12,27 +12,27 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter10;
+package com.kaifamiao.chapter12;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.ollama.OllamaChatModel;
+import org.springframework.ai.zhipuai.ZhiPuAiChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-public class OllamaChatTest {
+public class ZhipuAIChatTest {
     @Test
-    void testOllamaChat(@Autowired OllamaChatModel ollamaChatModel) {
+    void testZhipuAIChat(@Autowired ZhiPuAiChatModel zhipuAiChatModel) {
         String message = "你好，请用300字以内介绍一下你自己";
 //        Flux<ChatResponse> stream  = ollamaChatModel.stream(new Prompt(message));
 //        stream.toIterable().forEach(response -> {
 //            log.info("response: {}", response.getResult().getOutput().getText());
 //        });
-        ChatResponse response = ollamaChatModel.call(new Prompt(message));
+        ChatResponse response = zhipuAiChatModel.call(new Prompt(message));
         log.info("response: {}", response.getResult().getOutput().getText());
     }
 }

@@ -12,10 +12,11 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter10.service;
+package com.kaifamiao.chapter12.service;
 
-public enum AiPlatform {
-    ZHIPUAI, // 智谱AI
-    DASHSCOPE,//阿里百炼
-    OLLAMA,//ollama
+import org.springframework.ai.chat.client.ChatClient;
+
+public interface DynamicAiRouterService {
+    // 传入AI平台名称，返回ChatClient. AI平台名称来源于枚举
+    ChatClient chatClient(String aiPlatform);
 }

@@ -12,11 +12,16 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter10.service;
+package com.kaifamiao.chapter12;
 
-import org.springframework.ai.chat.client.ChatClient;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public interface DynamicAiRouterService {
-    // 传入AI平台名称，返回ChatClient. AI平台名称来源于枚举
-    ChatClient chatClient(String aiPlatform);
+@SpringBootApplication
+@Slf4j
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }

@@ -1,0 +1,44 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${AI_BAI_LIAN_API_KEY} # 必填,在操作系统环境变量中设置这个变量后,重启IDEA才能生效。因为IDEA启动的时候会缓存这个变量
+      chat:
+        options:
+          model: qwen-plus
+          # 这个值0~1，值越大代表生成的结果随机性越强。如果是一个聊天，这个值可以大一点。如果是一些严谨的规划，则这个值可以设置小一些
+          temperature: 0.7
+    chat:
+      client:
+        observations:
+          # 记录调用输入
+          include-input: true
+      observations:
+        # 记录 LLMs 输出
+        include-completion: true
+        # 记录 prompt
+        include-prompt: true
+        include-error-logging: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开放所有外部端点
+        include: "*"
+  endpoint:
+    health:
+      # 应用健康状态检查，携带详细新学年
+      show-details: always
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      # trace 采样信息，记录每个请求
+      probability: 1.0
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    org.springframework.web: DEBUG

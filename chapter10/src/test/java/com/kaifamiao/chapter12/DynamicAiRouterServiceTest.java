@@ -12,27 +12,30 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter10;
+package com.kaifamiao.chapter12;
 
+import com.kaifamiao.chapter12.service.AiPlatform;
+import com.kaifamiao.chapter12.service.DynamicAiRouterService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
-import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.zhipuai.ZhiPuAiChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-public class ZhipuAIChatTest {
+public class DynamicAiRouterServiceTest {
     @Test
-    void testZhipuAIChat(@Autowired ZhiPuAiChatModel zhipuAiChatModel) {
-        String message = "你好，请用300字以内介绍一下你自己";
-//        Flux<ChatResponse> stream  = ollamaChatModel.stream(new Prompt(message));
+    public void testChatClient(@Autowired DynamicAiRouterService dynamicAiRouterService) {
+        // 传入AI 平台名称
+        ChatClient chatClient = dynamicAiRouterService.chatClient(AiPlatform.DASHSCOPE.name());
+        String     message    = "你好，请用100字以内介绍一下你自己";
+//        Flux<ChatResponse> stream     = chatClient.prompt(message).stream().chatResponse();
 //        stream.toIterable().forEach(response -> {
 //            log.info("response: {}", response.getResult().getOutput().getText());
 //        });
-        ChatResponse response = zhipuAiChatModel.call(new Prompt(message));
+        ChatResponse response = chatClient.prompt(message).call().chatResponse();
         log.info("response: {}", response.getResult().getOutput().getText());
     }
 }

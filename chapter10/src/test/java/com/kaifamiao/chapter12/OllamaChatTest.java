@@ -12,30 +12,27 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter10;
+package com.kaifamiao.chapter12;
 
-import com.kaifamiao.chapter10.service.AiPlatform;
-import com.kaifamiao.chapter10.service.DynamicAiRouterService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-public class DynamicAiRouterServiceTest {
+public class OllamaChatTest {
     @Test
-    public void testChatClient(@Autowired DynamicAiRouterService dynamicAiRouterService) {
-        // 传入AI 平台名称
-        ChatClient chatClient = dynamicAiRouterService.chatClient(AiPlatform.DASHSCOPE.name());
-        String     message    = "你好，请用100字以内介绍一下你自己";
-//        Flux<ChatResponse> stream     = chatClient.prompt(message).stream().chatResponse();
+    void testOllamaChat(@Autowired OllamaChatModel ollamaChatModel) {
+        String message = "你好，请用300字以内介绍一下你自己";
+//        Flux<ChatResponse> stream  = ollamaChatModel.stream(new Prompt(message));
 //        stream.toIterable().forEach(response -> {
 //            log.info("response: {}", response.getResult().getOutput().getText());
 //        });
-        ChatResponse response = chatClient.prompt(message).call().chatResponse();
+        ChatResponse response = ollamaChatModel.call(new Prompt(message));
         log.info("response: {}", response.getResult().getOutput().getText());
     }
 }
