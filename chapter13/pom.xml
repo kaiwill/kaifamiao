@@ -9,33 +9,19 @@
     </parent>
 
     <artifactId>chapter13</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>chapter13</name>
+    <name>chapter13-parent</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!-- MCP Nacos 注册支持 -->
+            <dependency>
+                <groupId>com.alibaba.cloud.ai</groupId>
+                <artifactId>spring-ai-alibaba-starter-mcp-registry</artifactId>
+                <version>${spring-ai-alibaba.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-        <!-- MCP Nacos 注册支持 -->
-        <dependency>
-            <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-starter-mcp-registry</artifactId>
-            <version>${spring-ai-alibaba.version}</version>
-        </dependency>
-
-        <!-- MCP Server WebMvc 支持（也可换成 WebFlux） -->
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-mcp-server-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-    </dependencies>
 </project>
