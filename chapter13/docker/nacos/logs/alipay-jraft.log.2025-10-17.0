@@ -1,0 +1,132 @@
+2025-10-17 19:46:25,759 INFO SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+
+2025-10-17 19:46:25,849 INFO SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.GrpcRaftRpcFactory] loading.
+
+2025-10-17 19:46:26,035 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeDescribeSignalHandler] loading.
+
+2025-10-17 19:46:26,037 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeMetricsSignalHandler] loading.
+
+2025-10-17 19:46:26,039 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.ThreadPoolMetricsSignalHandler] loading.
+
+2025-10-17 19:46:26,062 INFO SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+
+2025-10-17 19:46:26,068 INFO The number of active nodes increment to 1.
+
+2025-10-17 19:46:26,394 INFO Starts FSMCaller successfully.
+
+2025-10-17 19:46:26,405 WARN No data for snapshot reader /home/nacos/data/protocol/raft/naming_persistent_service_v2/snapshot.
+
+2025-10-17 19:46:26,406 INFO Node <naming_persistent_service_v2/172.18.0.2:7848> init ballot box's lastCommittedIndex=0.
+
+2025-10-17 19:46:26,416 INFO Node <naming_persistent_service_v2/172.18.0.2:7848> init, term=0, lastLogId=LogId [index=0, term=0], conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,419 INFO Node <naming_persistent_service_v2/172.18.0.2:7848> start vote and grant vote self, term=0.
+
+2025-10-17 19:46:26,462 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_persistent_service_v2/meta-data, term=1, votedFor=172.18.0.2:7848, cost time=36 ms
+
+2025-10-17 19:46:26,463 INFO Node <naming_persistent_service_v2/172.18.0.2:7848> become leader of group, term=1, conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,466 INFO -Djraft.recyclers.maxCapacityPerThread: 4096.
+
+2025-10-17 19:46:26,469 WARN RPC server is not started in RaftGroupService.
+
+2025-10-17 19:46:26,469 INFO Start the RaftGroupService successfully.
+
+2025-10-17 19:46:26,483 INFO onLeaderStart: term=1.
+
+2025-10-17 19:46:26,505 INFO The number of active nodes increment to 2.
+
+2025-10-17 19:46:26,572 INFO Creating new channel to: 172.18.0.2:7848.
+
+2025-10-17 19:46:26,584 INFO The channel 172.18.0.2:7848 is in state: CONNECTING.
+
+2025-10-17 19:46:26,640 INFO Starts FSMCaller successfully.
+
+2025-10-17 19:46:26,646 WARN No data for snapshot reader /home/nacos/data/protocol/raft/naming_persistent_service/snapshot.
+
+2025-10-17 19:46:26,647 INFO Node <naming_persistent_service/172.18.0.2:7848> init ballot box's lastCommittedIndex=0.
+
+2025-10-17 19:46:26,649 INFO Node <naming_persistent_service/172.18.0.2:7848> init, term=0, lastLogId=LogId [index=0, term=0], conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,650 INFO Node <naming_persistent_service/172.18.0.2:7848> start vote and grant vote self, term=0.
+
+2025-10-17 19:46:26,670 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_persistent_service/meta-data, term=1, votedFor=172.18.0.2:7848, cost time=20 ms
+
+2025-10-17 19:46:26,671 INFO Node <naming_persistent_service/172.18.0.2:7848> become leader of group, term=1, conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,672 WARN RPC server is not started in RaftGroupService.
+
+2025-10-17 19:46:26,673 INFO Start the RaftGroupService successfully.
+
+2025-10-17 19:46:26,677 INFO onLeaderStart: term=1.
+
+2025-10-17 19:46:26,707 INFO The number of active nodes increment to 3.
+
+2025-10-17 19:46:26,822 INFO The channel 172.18.0.2:7848 is in state: READY.
+
+2025-10-17 19:46:26,822 INFO The channel 172.18.0.2:7848 has successfully established.
+
+2025-10-17 19:46:26,846 INFO Starts FSMCaller successfully.
+
+2025-10-17 19:46:26,851 WARN No data for snapshot reader /home/nacos/data/protocol/raft/naming_instance_metadata/snapshot.
+
+2025-10-17 19:46:26,851 INFO Node <naming_instance_metadata/172.18.0.2:7848> init ballot box's lastCommittedIndex=0.
+
+2025-10-17 19:46:26,852 INFO Node <naming_instance_metadata/172.18.0.2:7848> init, term=0, lastLogId=LogId [index=0, term=0], conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,853 INFO Node <naming_instance_metadata/172.18.0.2:7848> start vote and grant vote self, term=0.
+
+2025-10-17 19:46:26,870 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_instance_metadata/meta-data, term=1, votedFor=172.18.0.2:7848, cost time=16 ms
+
+2025-10-17 19:46:26,870 INFO Node <naming_instance_metadata/172.18.0.2:7848> become leader of group, term=1, conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:26,871 WARN RPC server is not started in RaftGroupService.
+
+2025-10-17 19:46:26,871 INFO Start the RaftGroupService successfully.
+
+2025-10-17 19:46:26,875 INFO onLeaderStart: term=1.
+
+2025-10-17 19:46:26,885 INFO The number of active nodes increment to 4.
+
+2025-10-17 19:46:27,013 INFO Starts FSMCaller successfully.
+
+2025-10-17 19:46:27,018 WARN No data for snapshot reader /home/nacos/data/protocol/raft/naming_service_metadata/snapshot.
+
+2025-10-17 19:46:27,018 INFO Node <naming_service_metadata/172.18.0.2:7848> init ballot box's lastCommittedIndex=0.
+
+2025-10-17 19:46:27,019 INFO Node <naming_service_metadata/172.18.0.2:7848> init, term=0, lastLogId=LogId [index=0, term=0], conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:27,021 INFO Node <naming_service_metadata/172.18.0.2:7848> start vote and grant vote self, term=0.
+
+2025-10-17 19:46:27,037 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_service_metadata/meta-data, term=1, votedFor=172.18.0.2:7848, cost time=16 ms
+
+2025-10-17 19:46:27,037 INFO Node <naming_service_metadata/172.18.0.2:7848> become leader of group, term=1, conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:27,038 WARN RPC server is not started in RaftGroupService.
+
+2025-10-17 19:46:27,039 INFO Start the RaftGroupService successfully.
+
+2025-10-17 19:46:27,043 INFO onLeaderStart: term=1.
+
+2025-10-17 19:46:27,372 INFO The number of active nodes increment to 5.
+
+2025-10-17 19:46:27,498 INFO Starts FSMCaller successfully.
+
+2025-10-17 19:46:27,502 WARN No data for snapshot reader /home/nacos/data/protocol/raft/lock_acquire_service_v2/snapshot.
+
+2025-10-17 19:46:27,503 INFO Node <lock_acquire_service_v2/172.18.0.2:7848> init ballot box's lastCommittedIndex=0.
+
+2025-10-17 19:46:27,504 INFO Node <lock_acquire_service_v2/172.18.0.2:7848> init, term=0, lastLogId=LogId [index=0, term=0], conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:27,505 INFO Node <lock_acquire_service_v2/172.18.0.2:7848> start vote and grant vote self, term=0.
+
+2025-10-17 19:46:27,527 INFO Save raft meta, path=/home/nacos/data/protocol/raft/lock_acquire_service_v2/meta-data, term=1, votedFor=172.18.0.2:7848, cost time=21 ms
+
+2025-10-17 19:46:27,528 INFO Node <lock_acquire_service_v2/172.18.0.2:7848> become leader of group, term=1, conf=172.18.0.2:7848, oldConf=.
+
+2025-10-17 19:46:27,529 WARN RPC server is not started in RaftGroupService.
+
+2025-10-17 19:46:27,529 INFO Start the RaftGroupService successfully.
+
+2025-10-17 19:46:27,535 INFO onLeaderStart: term=1.
+

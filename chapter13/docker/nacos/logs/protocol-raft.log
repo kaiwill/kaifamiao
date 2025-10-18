@@ -1,0 +1,26 @@
+2025-10-17 19:46:25,670 INFO Initializes the Raft protocol, raft-config info : {"data":{},"members":["172.18.0.2:7848"],"strictMode":false,"selfMember":"172.18.0.2:7848"}
+
+2025-10-17 19:46:25,935 INFO ========= The raft protocol is starting... =========
+
+2025-10-17 19:46:25,963 INFO ========= The raft protocol start finished... =========
+
+2025-10-17 19:46:26,019 INFO create raft group : naming_persistent_service_v2
+
+2025-10-17 19:46:26,485 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service_v2', leader='172.18.0.2:7848', term=1, raftClusterInfo=[172.18.0.2:7848]}
+
+2025-10-17 19:46:26,504 INFO create raft group : naming_persistent_service
+
+2025-10-17 19:46:26,677 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='172.18.0.2:7848', term=1, raftClusterInfo=[172.18.0.2:7848]}
+
+2025-10-17 19:46:26,704 INFO create raft group : naming_instance_metadata
+
+2025-10-17 19:46:26,876 INFO This Raft event changes : RaftEvent{groupId='naming_instance_metadata', leader='172.18.0.2:7848', term=1, raftClusterInfo=[172.18.0.2:7848]}
+
+2025-10-17 19:46:26,884 INFO create raft group : naming_service_metadata
+
+2025-10-17 19:46:27,045 INFO This Raft event changes : RaftEvent{groupId='naming_service_metadata', leader='172.18.0.2:7848', term=1, raftClusterInfo=[172.18.0.2:7848]}
+
+2025-10-17 19:46:27,371 INFO create raft group : lock_acquire_service_v2
+
+2025-10-17 19:46:27,535 INFO This Raft event changes : RaftEvent{groupId='lock_acquire_service_v2', leader='172.18.0.2:7848', term=1, raftClusterInfo=[172.18.0.2:7848]}
+
