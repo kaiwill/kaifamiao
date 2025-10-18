@@ -1,0 +1,1 @@
+{"tools":[{"name":"getWeatherByCity","description":"获取指定城市的天气预报","inputSchema":{"type":"object","properties":{"city":{"type":"string","description":"城市名称，例如：北京"}},"required":["city"],"additionalProperties":false}}],"toolsMeta":{},"securitySchemes":[]}

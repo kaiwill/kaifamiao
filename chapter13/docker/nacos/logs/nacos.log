@@ -22,3 +22,195 @@ io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2Exception: Unexpected HTT
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-10-18 11:24:55,712 INFO [capacityManagement] start correct usage
+
+2025-10-18 11:24:55,731 INFO [capacityManagement] end correct usage, cost: 0.016651869s
+
+2025-10-18 11:24:56,533 WARN clearHistoryConfig get scheduled
+
+2025-10-18 11:24:56,533 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 11:24:56,535 WARN clearConfigHistory, getBeforeStamp:2025-09-18 11:24:56.0, pageSize:1000
+
+2025-10-18 11:24:56,562 WARN history config cleaner successfully
+
+2025-10-18 11:34:55,678 INFO [capacityManagement] start correct usage
+
+2025-10-18 11:34:55,680 INFO [capacityManagement] end correct usage, cost: 6.71157E-4s
+
+2025-10-18 11:34:56,509 WARN clearHistoryConfig get scheduled
+
+2025-10-18 11:34:56,509 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 11:34:56,510 WARN clearConfigHistory, getBeforeStamp:2025-09-18 11:34:56.0, pageSize:1000
+
+2025-10-18 11:34:56,511 WARN history config cleaner successfully
+
+2025-10-18 11:44:55,631 INFO [capacityManagement] start correct usage
+
+2025-10-18 11:44:55,632 INFO [capacityManagement] end correct usage, cost: 7.42539E-4s
+
+2025-10-18 11:44:56,462 WARN clearHistoryConfig get scheduled
+
+2025-10-18 11:44:56,462 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 11:44:56,463 WARN clearConfigHistory, getBeforeStamp:2025-09-18 11:44:56.0, pageSize:1000
+
+2025-10-18 11:44:56,464 WARN history config cleaner successfully
+
+2025-10-18 11:54:55,586 INFO [capacityManagement] start correct usage
+
+2025-10-18 11:54:55,587 INFO [capacityManagement] end correct usage, cost: 5.73725E-4s
+
+2025-10-18 11:54:56,417 WARN clearHistoryConfig get scheduled
+
+2025-10-18 11:54:56,418 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 11:54:56,418 WARN clearConfigHistory, getBeforeStamp:2025-09-18 11:54:56.0, pageSize:1000
+
+2025-10-18 11:54:56,420 WARN history config cleaner successfully
+
+2025-10-18 12:04:55,548 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:04:55,549 INFO [capacityManagement] end correct usage, cost: 5.40626E-4s
+
+2025-10-18 12:04:56,380 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:04:56,380 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:04:56,381 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:04:56.0, pageSize:1000
+
+2025-10-18 12:04:56,382 WARN history config cleaner successfully
+
+2025-10-18 12:14:45,502 INFO Transport failed
+
+io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2Exception: Unexpected HTTP/1.x request: GET /get_device_level 
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2Exception.connectionError(Http2Exception.java:107)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler$PrefaceDecoder.readClientPrefaceString(Http2ConnectionHandler.java:315)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler$PrefaceDecoder.decode(Http2ConnectionHandler.java:245)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler.decode(Http2ConnectionHandler.java:451)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-10-18 12:14:55,513 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:14:55,514 INFO [capacityManagement] end correct usage, cost: 4.65419E-4s
+
+2025-10-18 12:14:56,346 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:14:56,346 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:14:56,347 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:14:56.0, pageSize:1000
+
+2025-10-18 12:14:56,348 WARN history config cleaner successfully
+
+2025-10-18 12:24:55,482 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:24:55,483 INFO [capacityManagement] end correct usage, cost: 4.65418E-4s
+
+2025-10-18 12:24:56,316 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:24:56,316 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:24:56,317 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:24:56.0, pageSize:1000
+
+2025-10-18 12:24:56,318 WARN history config cleaner successfully
+
+2025-10-18 12:34:55,513 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:34:55,518 INFO [capacityManagement] end correct usage, cost: 5.95324E-4s
+
+2025-10-18 12:34:56,287 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:34:56,601 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:34:56,743 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:34:56.0, pageSize:1000
+
+2025-10-18 12:34:56,747 WARN history config cleaner successfully
+
+2025-10-18 12:44:55,491 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:44:55,491 INFO [capacityManagement] end correct usage, cost: 4.27916E-4s
+
+2025-10-18 12:44:56,720 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:44:56,720 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:44:56,721 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:44:56.0, pageSize:1000
+
+2025-10-18 12:44:56,722 WARN history config cleaner successfully
+
+2025-10-18 12:54:55,464 INFO [capacityManagement] start correct usage
+
+2025-10-18 12:54:55,465 INFO [capacityManagement] end correct usage, cost: 3.99416E-4s
+
+2025-10-18 12:54:56,695 WARN clearHistoryConfig get scheduled
+
+2025-10-18 12:54:56,695 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 12:54:56,696 WARN clearConfigHistory, getBeforeStamp:2025-09-18 12:54:56.0, pageSize:1000
+
+2025-10-18 12:54:56,697 WARN history config cleaner successfully
+
+2025-10-18 13:01:04,628 INFO Transport failed
+
+io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2Exception: Unexpected HTTP/1.x request: GET /get_device_level 
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2Exception.connectionError(Http2Exception.java:107)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler$PrefaceDecoder.readClientPrefaceString(Http2ConnectionHandler.java:315)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler$PrefaceDecoder.decode(Http2ConnectionHandler.java:245)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler.decode(Http2ConnectionHandler.java:451)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-10-18 13:04:55,438 INFO [capacityManagement] start correct usage
+
+2025-10-18 13:04:55,442 INFO [capacityManagement] end correct usage, cost: 6.61925E-4s
+
+2025-10-18 13:04:56,669 WARN clearHistoryConfig get scheduled
+
+2025-10-18 13:04:56,670 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 13:04:56,671 WARN clearConfigHistory, getBeforeStamp:2025-09-18 13:04:56.0, pageSize:1000
+
+2025-10-18 13:04:56,672 WARN history config cleaner successfully
+
+2025-10-18 13:14:55,415 INFO [capacityManagement] start correct usage
+
+2025-10-18 13:14:55,417 INFO [capacityManagement] end correct usage, cost: 4.94021E-4s
+
+2025-10-18 13:14:56,645 WARN clearHistoryConfig get scheduled
+
+2025-10-18 13:14:56,646 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-10-18 13:14:56,646 WARN clearConfigHistory, getBeforeStamp:2025-09-18 13:14:56.0, pageSize:1000
+
+2025-10-18 13:14:56,647 WARN history config cleaner successfully
+

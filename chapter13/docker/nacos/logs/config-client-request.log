@@ -1,0 +1,12 @@
+2025-10-18 14:11:35,874|opType: get | rt: 0ms | status: success | requestIp: null | dataId: null-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: 
+2025-10-18 14:11:35,995|opType: get | rt: 0ms | status: success | requestIp: null | dataId: null-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: 
+2025-10-18 14:11:36,119|opType: get | rt: 0ms | status: success | requestIp: null | dataId: null-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: 
+2025-10-18 14:11:36,243|opType: get | rt: 0ms | status: success | requestIp: null | dataId: null-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: 
+2025-10-18 14:11:36,600|opType: publish | rt: 76ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-1.0.0-mcp-tools.json | group: mcp-tools | tenant: public | md5: f6406bca36c185e42829c5278dad3c74
+2025-10-18 14:11:36,619|opType: publish | rt: 9ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: d58c5082de173de8a2bcaa11202354da
+2025-10-18 14:11:36,632|opType: publish | rt: 6ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-1.0.0-mcp-server.json | group: mcp-server | tenant: public | md5: a8e4c045cd6f28f24c5ec03f2d92e163
+2025-10-18 14:11:40,725|opType: get | rt: 29ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: d58c5082de173de8a2bcaa11202354da
+2025-10-18 14:11:45,611|opType: get | rt: 15ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: d58c5082de173de8a2bcaa11202354da
+2025-10-18 14:11:45,623|opType: get | rt: 11ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-1.0.0-mcp-server.json | group: mcp-server | tenant: public | md5: a8e4c045cd6f28f24c5ec03f2d92e163
+2025-10-18 14:11:45,636|opType: get | rt: 9ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-1.0.0-mcp-tools.json | group: mcp-tools | tenant: public | md5: f6406bca36c185e42829c5278dad3c74
+2025-10-18 14:11:53,624|opType: get | rt: 18ms | status: success | requestIp: null | dataId: 25413a5f-f167-4732-a0fc-29d444cf51e0-mcp-versions.json | group: mcp-server-versions | tenant: public | md5: d58c5082de173de8a2bcaa11202354da

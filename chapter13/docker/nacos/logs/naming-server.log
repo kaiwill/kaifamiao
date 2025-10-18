@@ -1,10 +1,6 @@
-2025-10-17 19:46:27,232 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+2025-10-18 14:11:35,600 INFO Client connection 1760767895359_172.18.0.1_54380 connect
 
-2025-10-17 19:46:27,232 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+2025-10-18 14:11:36,966 INFO Client change for service Service{namespace='public', group='mcp-server', name='webflux-mcp-server', ephemeral=true, revision=0}, 1760767895359_172.18.0.1_54380
 
-2025-10-17 19:46:27,233 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
-
-2025-10-17 19:46:27,233 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
-
-2025-10-17 19:46:34,061 INFO Load instance extension handler []
+2025-10-18 14:11:36,974 WARN [fuzzy-watch] service change matched,service key public@@mcp-server@@webflux-mcp-server,changed type ADD_SERVICE 
 

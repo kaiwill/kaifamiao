@@ -12,16 +12,17 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter13;
+package com.kaifamiao.chapter13.mcpserver;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.ai.tool.annotation.ToolParam;
+import org.springframework.stereotype.Service;
 
-@SpringBootApplication
-@Slf4j
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+@Service
+public class WeatherMcpService {
+    @Tool(description = "获取指定城市的天气预报")
+    public String getWeatherByCity(@ToolParam(description = "城市名称，例如：北京") String city) {
+        // ... 调用高德地图API的代码 ...
+        return "今天北京晴，气温25℃...";
     }
 }

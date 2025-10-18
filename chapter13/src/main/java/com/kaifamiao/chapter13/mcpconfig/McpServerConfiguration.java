@@ -12,16 +12,18 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter13;
+package com.kaifamiao.chapter13.mcpconfig;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.kaifamiao.chapter13.mcpserver.WeatherMcpService;
+import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.ai.tool.method.MethodToolCallbackProvider;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-@Slf4j
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+@Configuration
+public class McpServerConfiguration {
+    @Bean
+    public ToolCallbackProvider timeServiceTools(WeatherMcpService weatherMcpService) {
+        return MethodToolCallbackProvider.builder().toolObjects(weatherMcpService).build();
     }
 }

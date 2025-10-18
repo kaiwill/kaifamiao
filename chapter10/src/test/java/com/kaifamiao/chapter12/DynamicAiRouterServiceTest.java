@@ -12,10 +12,10 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  *******************************************************************************/
-package com.kaifamiao.chapter12;
+package com.kaifamiao.chapter13;
 
-import com.kaifamiao.chapter12.service.AiPlatform;
-import com.kaifamiao.chapter12.service.DynamicAiRouterService;
+import com.kaifamiao.chapter13.service.AiPlatform;
+import com.kaifamiao.chapter13.service.DynamicAiRouterService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
