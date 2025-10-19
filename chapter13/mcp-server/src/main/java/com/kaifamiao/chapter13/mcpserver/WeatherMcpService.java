@@ -14,15 +14,18 @@
  *******************************************************************************/
 package com.kaifamiao.chapter13.mcpserver;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class WeatherMcpService {
     @Tool(description = "获取指定城市的天气预报")
     public String getWeatherByCity(@ToolParam(description = "城市名称，例如：北京") String city) {
         // ... 调用高德地图API的代码 ...
+        log.info("获取城市{}的天气预报", city);
         return "今天北京晴，气温25℃...";
     }
 }

@@ -2,7 +2,7 @@ spring:
   ai:
     mcp:
       server:
-        name: webflux-mcp-server
+        name: webmvc-mcp-server
         version: 1.0.0
         type: ASYNC  # Recommended for reactive applications
         instructions: "This reactive server provides time information tools and resources"
@@ -25,7 +25,7 @@ spring:
           register:
             enabled: true
             service-group: mcp-server
-            service-name: webflux-mcp-server
+            service-name: webmvc-mcp-server
 logging:
   level:
     org.springframework.ai: debug

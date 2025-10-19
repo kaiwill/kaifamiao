@@ -29,6 +29,7 @@ spring:
             sse:
               connections:
                 server1:
-                  service-name: webflux-mcp-server
+                  service-name: webmvc-mcp-server
                   version: 1.0.0
-
+server:
+  port: 8088

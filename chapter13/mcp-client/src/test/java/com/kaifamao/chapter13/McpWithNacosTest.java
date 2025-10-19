@@ -13,7 +13,7 @@
  *    limitations under the License.
  *******************************************************************************/
 package com.kaifamao.chapter13;
-
+import com.kaifamiao.chapter13.McpClientApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
@@ -21,8 +21,7 @@ import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
+@SpringBootTest(classes = McpClientApplication.class)
 @Slf4j
 public class McpWithNacosTest {
 
