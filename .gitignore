@@ -8,3 +8,4 @@
 /target/
 /**/target/
 /**/.flattened-pom.xml
+/chapter13/docker/nacos/

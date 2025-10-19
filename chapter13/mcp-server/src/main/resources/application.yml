@@ -26,3 +26,7 @@ spring:
             enabled: true
             service-group: mcp-server
             service-name: webflux-mcp-server
+logging:
+  level:
+    org.springframework.ai: debug
+    org.springframework.web: DEBUG

@@ -27,7 +27,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class McpWithNacosTest {
 
     @Test
-    void testMcpWithNacos(@Autowired ChatClient.Builder chatClientBuilder,
+  public  void testMcpWithNacos(@Autowired ChatClient.Builder chatClientBuilder,
                           // 通过@Qualifier注入从Nacos动态发现的工具
                           @Qualifier("loadbalancedMcpAsyncToolCallbacks") ToolCallbackProvider tools
     ) {
