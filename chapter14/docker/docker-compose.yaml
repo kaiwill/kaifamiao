@@ -1,0 +1,22 @@
+version: '1.0.0'
+
+services:
+  nacos:
+    container_name: nacos3
+    restart: always
+    image: nacos/nacos-server:latest
+    ports:
+      - "7080:8080"
+      - "7848:8848"
+      - "8848:9848"
+    environment:
+      - MODE=standalone
+      - NACOS_AUTH_TOKEN=dG9rZW5hbHNka2ZqbGFza2RqZmxhc2tkamZsYXNrZGpmb3dpZWpmbztzZGxm
+      - NACOS_AUTH_IDENTITY_KEY=admin
+      - NACOS_AUTH_IDENTITY_VALUE=admin
+    volumes:
+      - ./nacos/logs:/home/nacos/logs
+      - ./nacos/data:/home/nacos/data
+networks:
+  o11y-network:
+    driver: bridge

@@ -1,0 +1,21 @@
+spring:
+  # 配置导入：从Nacos加载名为 'prompt-config.json' 的配置
+  config:
+    import: "nacos:prompt-config.json"
+  nacos:
+    server-addr: 127.0.0.1:7848
+    username: nacos
+    password: VGJsQzFjXA # 替换成自己的密码
+
+  ai:
+    dashscope:
+      api-key: ${AI_BAI_LIAN_API_KEY}
+      chat:
+        options:
+          model: qwen-plus
+          temperature: 0.7
+    # 开启 nacos 的 prompt tmpl 监听功能
+    nacos:
+      prompt:
+        template:
+          enabled: true  #启用Nacos Prompt模板功能
