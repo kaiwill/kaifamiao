@@ -1,0 +1,16 @@
+@startuml expander_flow
+skinparam usecaseFontSize 14
+skinparam usecaseStereotypeFontSize 12
+skinparam hexagonFontSize 14
+skinparam hexagonStereotypeFontSize 12
+title "expander flow"
+footer
+
+powered by spring-ai-alibaba
+end footer
+circle start<<input>> as __START__
+circle stop as __END__
+usecase "expander"<<Node>>
+"__START__" -down-> "expander"
+"expander" -down-> "__END__"
+@enduml
