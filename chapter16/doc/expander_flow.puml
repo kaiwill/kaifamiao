@@ -1,0 +1,25 @@
+ @startuml human_flow
+skinparam usecaseFontSize 14
+skinparam usecaseStereotypeFontSize 12
+skinparam hexagonFontSize 14
+skinparam hexagonStereotypeFontSize 12
+title "human flow"
+footer
+
+powered by spring-ai-alibaba
+end footer
+circle start<<input>> as __START__
+circle stop as __END__
+usecase "expander"<<Node>>
+usecase "translate"<<Node>>
+usecase "humanfeedback"<<Node>>
+hexagon "check state" as condition1<<Condition>>
+"__START__" -down-> "expander"
+"expander" -down-> "humanfeedback"
+"humanfeedback" .down.> "condition1"
+"condition1" .down.> "__END__"
+'"humanfeedback" .down.> "__END__"
+"condition1" .down.> "translate"
+'"humanfeedback" .down.> "translate"
+"translate" -down-> "__END__"
+@enduml
